@@ -1,6 +1,7 @@
 <?php
 
 class Berita_model extends CI_Model {
+    
     public function getAllBerita()
     {
         $this->db->order_by('id', 'DESC');

@@ -41,9 +41,9 @@
                 <div class="card-body">
                     <h5 class="card-title"><?= $news['tanggal']; ?></h5>
                     <p class="card-text"><?= substr($news['isi'], 0, 200);?>...</p>
-                    <a href="<?= base_url(); ?>berita/detail/<?= $news['id']; ?>" class="btn btn-primary btn-sm mr-2">Detail</a>
-                    <a href="<?= base_url(); ?>berita/edit/<?= $news['id']; ?>" class="btn btn-warning btn-sm mr-2">Edit</a>
-                    <a href="<?= base_url(); ?>berita/hapus/<?= $news['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus berita ini?')">Hapus</a>
+                    <a href="<?= base_url(); ?>berita/hapus/<?= $news['id']; ?>" class="btn btn-danger btn-sm float-right mr-3" onclick="return confirm('Yakin ingin menghapus berita ini?')">Hapus</a>
+                    <a href="<?= base_url(); ?>berita/edit/<?= $news['id']; ?>" class="btn btn-warning btn-sm float-right mr-2">Edit</a>
+                    <a href="<?= base_url(); ?>berita/detail/<?= $news['id']; ?>" class="btn btn-primary btn-sm float-right mr-2">Detail</a>
                 </div>
             </div>
         <?php endforeach; ?>

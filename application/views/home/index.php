@@ -1,7 +1,7 @@
 <div class="container h-100">
     <div class="row">
         <div class="col">
-            <p style="font-size: 70px; margin-left: 2.7cm;">Daftar Berita</p>
+            <p style="font-size: 70px; margin-left: 2.7cm;">Portal Berita</p>
         </div>
         <div class="col" style="margin-right: 2.7cm; margin-top: 1.19cm;">
             <form action="" method="post" class="float-right">
@@ -41,10 +41,9 @@
                 <div class="card-body">
                     <h5 class="card-title"><?= $news['tanggal']; ?></h5>
                     <p class="card-text"><?= substr($news['isi'], 0, 200);?>...</p>
-                    <a href="<?= base_url(); ?>home/detail/<?= $news['id']; ?>" class="btn btn-primary btn-sm mr-2">Detail</a>
+                    <a href="<?= base_url(); ?>home/detail/<?= $news['id']; ?>" class="btn btn-primary mr-2">Detail</a>
                 </div>
             </div>
         <?php endforeach; ?>
-
     </div>
 </div> 

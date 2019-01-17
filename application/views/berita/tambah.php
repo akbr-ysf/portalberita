@@ -5,10 +5,12 @@
             <div class="form-group">
                 <label for="judul">Judul Berita</label>
                 <input type="text" class="form-control" id="judul" name="judul">
+                <small class="form-text text-danger"><?= form_error('judul'); ?></small>
             </div>
             <div class="form-group">
                 <label for="isi">Isi Berita</label>
                 <textarea type="text" class="form-control" id="isi" name="isi" rows="20"></textarea>
+                <small class="form-text text-danger"><?= form_error('isi'); ?></small>
             </div>
             <button type="submit" name="tambah" class="btn btn-primary float-right ml-3">Terbitkan Berita</button>
             <a href="<?= base_url(); ?>berita/index" onclick="return confirm('Yakin ingin keluar?');" class="btn btn-warning float-right">Batal</a>

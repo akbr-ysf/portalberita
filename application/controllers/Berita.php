@@ -5,10 +5,17 @@
         public function __construct()
         {
             parent::__construct();
+            
             $this->load->model('Berita_model');
             $this->load->library('form_validation');
             $this->load->helper('date');
+            
+            if( $this->session->userdata('email'))
+            {
 
+            } else {
+                redirect(base_url('login/index'));
+            }
         }
 
         public function index()
@@ -76,7 +83,7 @@
                 $this->load->view('berita/edit', $data);
                 $this->load->view('templates/footer');
             } else {
-                $this->Berita_model->EditBerita();
+                $this->Berita_model->editBerita();
                 $this->session->set_flashdata('flash', 'Diedit');
                 redirect('berita');
             }
